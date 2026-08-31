@@ -1,1 +1,204 @@
-HI
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #09090b;
+      --card-bg: #18181b;
+      --accent-color: rgba(255, 255, 255, 0.4);
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    /* Bento Grid Layout */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 220px;
+      gap: 1.25rem;
+      width: 100%;
+      max-width: 960px;
+      perspective: 1000px; /* Enables 3D Space */
+    }
+
+    /* Column Spans for Bento Asymmetry */
+    .bento-card.col-span-2 {
+      grid-column: span 2;
+    }
+
+    .bento-card.row-span-2 {
+      grid-row: span 2;
+    }
+
+    /* Base Card Styling */
+    .bento-card {
+      background-color: var(--card-bg);
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.15s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mouse Glow Border Overlay */
+    .bento-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: radial-gradient(
+        600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+        var(--accent-color),
+        transparent 40%
+      );
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .bento-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Content Placement & 3D Layering */
+    .card-content {
+      z-index: 1;
+      transform: translateZ(30px); /* Pushes text forward in 3D space */
+      transition: transform 0.15s ease;
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h2, h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(180px, auto);
+      }
+      .bento-card.col-span-2 {
+        grid-column: span 1;
+      }
+      .bento-card.row-span-2 {
+        grid-row: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="bento-grid">
+    <article class="bento-card col-span-2">
+      <div class="card-content">
+        <span class="card-tag">Featured Project</span>
+        <h2>Interactive Web Studio</h2>
+        <p>A high-performance visual playground built with native browser technologies.</p>
+      </div>
+    </article>
+
+    <article class="bento-card row-span-2">
+      <div class="card-content">
+        <span class="card-tag">About</span>
+        <h2>Frontend Architect</h2>
+        <p>Crafting bespoke digital interfaces focusing on micro-interactions, layout precision, and modern Web APIs.</p>
+      </div>
+    </article>
+
+    <article class="bento-card">
+      <div class="card-content">
+        <span class="card-tag">Stack</span>
+        <h2>HTML5 / CSS3 / ES6+</h2>
+        <p>Framework-free craftsmanship.</p>
+      </div>
+    </article>
+
+    <article class="bento-card">
+      <div class="card-content">
+        <span class="card-tag">Connect</span>
+        <h2>Get in Touch</h2>
+        <p>Available for select freelance projects and collaborations.</p>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    const cards = document.querySelectorAll('.bento-card');
+
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        
+        // Mouse positions relative to the card
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Set CSS variables for radial glow
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+
+        // 3D Tilt Math
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -10; // Max 10 deg tilt
+        const rotateY = ((x - centerX) / centerX) * 10;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+
+      // Reset card position on mouse leave
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    });
+  </script>
+</body>
+</html>

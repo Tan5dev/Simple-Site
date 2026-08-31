@@ -557,3 +557,87 @@ body {
   border-radius: 4px;
 }
 
+/* Typography */
+.exp-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.exp-sub {
+  font-family: 'Fira Code', monospace;
+  color: #888888;
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Vertical Timeline Track */
+.timeline-container {
+  position: relative;
+  border-left: 2px solid #282a30;
+  padding-left: 2rem;
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  background: #16171a;
+  border: 1px solid #282a30;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Timeline Dot Indicator */
+.timeline-dot {
+  position: absolute;
+  left: -2.6rem;
+  top: 1.8rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00f2fe;
+  border: 4px solid #121316;
+  box-shadow: 0 0 0 2px #282a30;
+}
+
+.timeline-date {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: #6a6e7a;
+  margin-bottom: 0.5rem;
+}
+
+.role-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.company-name {
+  font-family: 'Fira Code', monospace;
+  color: #00f2fe;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.role-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #888888;
+  margin-bottom: 1.2rem;
+}
+
+/* Blue Tech Tags */
+.highlight-tag {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.2);
+}

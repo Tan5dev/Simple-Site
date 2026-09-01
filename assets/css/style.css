@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Agustina';
     src: url('./assets/fonts/Agustina.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -42,61 +42,60 @@ a:hover{
 }
 
 [data-bs-theme="dark"] {
+    --text-color: #fff;
+    --muted-text: #9a9a9a;
+    --bg-color: #212121;
+    --btn-color: #fff;
+
+    --offcanvas-bg: rgba(0,0,0,0.9);
+    --offcanvas-border-color: rgba(255, 255, 255, 0.2);
+
     position: relative;
-    color: rgb(255, 255, 255/1);
-    z-index: 0;
+    isolation: isolate;
+    color: #fff;
 }
 
 [data-bs-theme="dark"]::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000 url('./assets/images/dark-bg.webp') 50% no-repeat;
-    background-size: cover;
+    inset: 0;
+
+    background: #000 url('./assets/images/dark-bg.webp') center center / cover no-repeat;
+
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
+
     z-index: -1;
+    pointer-events: none;
 }
 
-[data-bs-theme="dark"] {
-    --text-color: #fff;
-    --muted-text: #9a9a9a;
-    --bg-color: #212121;
-    --btn-color: #fff;
-    --offcanvas-bg: rgba(0,0,0,0.9);
-    --offcanvas-border-color: rgba(255, 255, 255, 0.2);
-}
-
-[data-bs-theme="light"] {
-    position: relative;
-    color: rgb(255, 255, 255/1);
-    z-index: 0;
-}
-
-[data-bs-theme="light"]::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff url('./assets/images/light-bg.webp') 50% no-repeat;
-    background-size: cover;
-    filter: brightness(90%);
-    -webkit-filter: brightness(90%);
-    z-index: -1;
-}
 
 [data-bs-theme="light"] {
     --text-color: #000;
     --muted-text: #000;
     --bg-color: #fff;
     --btn-color: #fff;
+
     --offcanvas-bg: rgba(215, 215, 215, 0.9);
     --offcanvas-border-color: rgba(255, 255, 255, 0.2);
+
+    position: relative;
+    isolation: isolate;
+    color: #000;
+}
+
+[data-bs-theme="light"]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: #fff url('./assets/images/light-bg.webp') center center / cover no-repeat;
+
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+
+    z-index: -1;
+    pointer-events: none;
 }
 
 *::selection {
@@ -127,9 +126,9 @@ a:hover{
     color: var(--primary-color);
 }
 
-.logo-name{
-    font-family: 'Agustina', 'Rubik', sans-serif;
-    font-size: 1.2rem;
+.logo-name {
+    font-family: 'Agustina', cursive !important;
+    font-weight: 400;
 }
 
 .primary-bg-btn{

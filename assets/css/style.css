@@ -1,20 +1,14 @@
-
-/*--------------------------------------------------------------
-# Global Settings
---------------------------------------------------------------*/
-
 @font-face {
     font-family: 'Agustina';
-    src: url('/assets/fonts/Agustina.woff') format('woff');
+    src: url('assets/fonts/Agustina.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Dancing Script';
-    src: url('/assets/fonts/DancingScript-Medium.ttf') format('truetype');
+    src: url('assets/fonts/DancingScript-Medium.ttf') format('truetype');
 }
 
 
-/* Global Variables */
 :root{
     --font-family: 'Rubik', sans-serif;
     --primary-color: #415de6;
@@ -41,7 +35,6 @@ a:hover{
     color: var(--secondary-color);
 }
 
-/* Dark Mode */
 [data-bs-theme="dark"] {
     position: relative;
     color: rgb(255, 255, 255/1);
@@ -55,14 +48,13 @@ a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000 url(/assets/images/dark-bg.webp) 50% no-repeat;
+    background: #000 url(assets/images/dark-bg.webp) 50% no-repeat;
     background-size: cover;
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
     z-index: -1;
 }
 
-/* Dark Mode styles */
 [data-bs-theme="dark"] {
     --text-color: #fff;
     --muted-text: #9a9a9a;
@@ -72,7 +64,6 @@ a:hover{
     --offcanvas-border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Light Mode */
 [data-bs-theme="light"] {
     position: relative;
     color: rgb(255, 255, 255/1);
@@ -86,14 +77,13 @@ a:hover{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff url(/assets/images/light-bg.webp) 50% no-repeat;
+    background: #fff url(assets/images/light-bg.webp) 50% no-repeat;
     background-size: cover;
     filter: brightness(90%);
     -webkit-filter: brightness(90%);
     z-index: -1;
 }
 
-/* Light Mode styles */
 [data-bs-theme="light"] {
     --text-color: #000;
     --muted-text: #000;
@@ -243,7 +233,6 @@ a:hover{
     color: var(--muted-text);
 }
 
-/* Preloader */
 #preloader {
     position: fixed;
     z-index: 99;
@@ -264,10 +253,6 @@ a:hover{
         visibility: hidden;
     }
 }
-
-/*--------------------------------------------------------------
-# Header Section
---------------------------------------------------------------*/
 
 #header{
     background: transparent;
@@ -360,10 +345,6 @@ a:hover{
     width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-
 #hero {
     position: relative;
     padding: 160px 0px 50px 0px;
@@ -415,7 +396,7 @@ a:hover{
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-image: url(/assets/images/portrait.webp);
+    background-image: url(assets/images/portrait.webp);
 }
 
 @media (max-width: 576px) {
@@ -443,7 +424,7 @@ a:hover{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url(/assets/images/portrait.webp);
+        background-image: url(assets/images/portrait.webp);
     }
 
     .hero-content{
@@ -469,14 +450,9 @@ a:hover{
     }
 }
 
-
-/*--------------------------------------------------------------
-# Things I Love Section
---------------------------------------------------------------*/
-
 #things-i-love {
     padding: 90px 0px;
-    background-image: url(/assets/images/grid.png);
+    background-image: url(assets/images/grid.png);
     background-size: contain;
     min-height: 100vh;
 }
@@ -525,12 +501,9 @@ a:hover{
     color: var(--muted-text);
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
 #about{
     padding: 100px 0px;
-    background-image: url(/assets/images/grid.png);
+    background-image: url(assets/images/grid.png);
     background-size: contain;
     min-height: 100vh;
 }
@@ -610,10 +583,6 @@ a:hover{
         }
     }
 
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-
 #skills{
     padding: 100px 0px;
     min-height: 100vh;
@@ -644,13 +613,9 @@ a:hover{
     margin: 0;
 }
 
-/*--------------------------------------------------------------
-# Tools Section
---------------------------------------------------------------*/
-
 #tools{
     padding: 100px 0px 80px 0px;
-    background-image: url(/assets/images/grid.png);
+    background-image: url(assets/images/grid.png);
     background-size: contain;
     min-height: 100vh;
 }
@@ -680,22 +645,14 @@ a:hover{
     margin: 0;
 }
 
-/*--------------------------------------------------------------
-# Timeline Section
---------------------------------------------------------------*/
-
 #timelines{
     padding: 100px 0px 80px 0px;
 }
 
-/*--------------------------------------------------------------
-# Projects Section
---------------------------------------------------------------*/
-
 #projects{
     padding: 100px 0px 80px 0px;
     min-height: 100vh;
-    background-image: url(/assets/images/grid.png);
+    background-image: url(assets/images/grid.png);
     background-size: contain;
 }
 
@@ -805,14 +762,10 @@ a:hover{
     border: 1px solid var(--bg-color);
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-
 #testimonials {
     padding: 100px 0px;
     min-height: 100vh;
-    background-image: url(/assets/images/grid.png);
+    background-image: url(assets/images/grid.png);
     background-size: contain;
 }
 
@@ -831,7 +784,6 @@ a:hover{
     -webkit-backdrop-filter: blur(20px);
 }
 
-/* Notch Icon for Testimonial Div */
 .testimonial .description:after{
     position: absolute;
     bottom: -11px;
@@ -894,14 +846,10 @@ a:hover{
     font-size: 25px;
 }
 
-/*--------------------------------------------------------------
-# Blogs Section
---------------------------------------------------------------*/
-
 #blogs{
     padding: 100px 0px;
     min-height: 100vh;
-    background-image: url(/assets/images/grid.png);
+    background-image: url(assets/images/grid.png);
     background-size: contain;
 }
 
@@ -965,14 +913,11 @@ a:hover{
     width: 80%;
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 
 #contact{
     padding: 100px 0;
     min-height: 100vh;
-    background-image: url(/assets/images/grid.png);
+    background-image: url(assets/images/grid.png);
     background-size: contain;
 }
 
@@ -1003,9 +948,6 @@ a:hover{
     background-color: #850dd5;
 }
 
-/*--------------------------------------------------------------
-# Footer Section
---------------------------------------------------------------*/
 
 #footer > .container{
     padding: 1rem;
@@ -1031,7 +973,6 @@ a:hover{
     -webkit-text-fill-color: transparent;
 }
 
-/*--------- Back To Top ------------*/
 
 #backToTopButton{
     display: none;

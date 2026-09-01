@@ -1,29 +1,23 @@
-# My Personal Site
+##My Personal Site
 
-**Hi, this is my personal site. I wanted to make something that actually felt like me instead of making another basic portfolio with a bunch of cards and sections.**
+My personal site is my work, where I tried to do something different: not yet another portfolio with cards and sections.
 
-I started working on this project for the **Stardance Personal Page mission** by first thinking about what kind of website I actually wanted to build. I didn't want it to look like a normal portfolio, so I decided to take inspiration from something I spend a lot of time around: **VS Code and coding itself**.
+I started working on the assignment for the Stardance Personal Page mission by defining my requirements and desires concerning this project. First of all, I did not want to create another boring portfolio. I chose the VS Code coding platform and decided to mimic it while placing my information on it.
 
-My idea was to make the website feel like you're looking at a developer's screen. Instead of just putting my information on a plain page, I wanted different parts of my profile to feel like files, tabs, code, and a real development environment.
+The most challenging aspect of this task was the design.
 
-The design was honestly the hardest part.
+I spent hours and hours trying to figure out the layout, spacing, colors, and other elements that would be visually appealing and, at the same time, reminiscent of my everyday coding tool. Moreover, the mockup required me to use my imagination: after discarding the first version, I kept evolving the layout until I managed to find something that looked close to what I have in mind. I tried to recreate the coding environment’s vibe using the colors of VS Code as the basis, but I made sure my website remained unique.
 
-I spent quite a bit of time figuring out the layout, spacing, colors, and how everything should fit together. My first idea wasn't really working, and I kept changing things until the site started to feel more like what I had imagined. I also took inspiration from the VS Code color scheme and tried to recreate that kind of atmosphere while still making the website feel like its own thing.
+Another critical detail of this project was making sure that the page appeared as a screen with elements of the application rather than a regular website. Therefore, I tried to play with the layout, tabs, sidebar, code area, and other tools in VS Code to make my website look like a real dev environment. Following that, I filled the page with my data, describing who I am, what skills I have, what projects I have worked on, etc. I did not aim to make it look like a traditional resume or a LinkedIn page; instead, I tried to make the information concise and easy to understand.
 
-One of the things I cared about the most was making the site feel like an **actual screen** instead of just a website pretending to be an editor. I worked on the window layout, tabs, sidebar, code-style sections, and small details that make the interface feel more alive.
+During the development process, I had to constantly engage in a trial-and-error mechanism to get the look and feel I desired. Sometimes, it took me ages to make a couple of lines of text look perfect, while other elements appeared to be misplaced or unsuitable for the overall design. I kept tweaking and fine-tuning the website to see everything in the larger picture.
 
-After getting the main design working, I started filling it with my actual information — my introduction, skills, projects, and other things I wanted people to know about me. I tried to keep the content simple instead of making the site feel like a formal resume.
+Another valuable lesson I learned while working on this project is that developing a website involves more time and effort than I expect. Moreover, a significant part of this work is imagining how the final product should look and feel. Sometimes I spent minutes, hours, or even days visualizing the outcome instead of coding.
 
-There was also a lot of trial and error during development. Some things looked good in my head but didn't look nearly as good once I actually put them on the page. I had to constantly test the layout, adjust spacing, fix small styling issues, and make sure everything still looked good together.
+I developed this project in the VS Code environment, constantly improving the layout, code, and other aspects of the mockup. Finally, I am satisfied with the end result: a personal website that looks like a real coding environment.
 
-Another thing I learned from this project is that **building a website isn't just about writing code**. A huge part of it is figuring out what you want to build in the first place. Sometimes I spent more time thinking about how something should look than actually coding it.
+Although the Stardance coding timer shows a specific number of hours dedicated to this project, this metric does not reflect the hard work and dedication spent on it. In fact, this indicator only shows how much time I dedicated to actual coding. Meanwhile, there were plenty of hours I invested in thinking about the website, experimenting with the design, tweaking and debugging the code, and figuring out why some elements appeared broken or misplaced.
 
-I built the project in VS Code and kept improving it section by section until I was happy with how everything came together.
+With that said, my personal site is now done, but I do not think it is ever complete. In the future, I will continue to invest time and effort into it, updating the page, adding more information, experimenting with the design and code, and turning it into something greater and more customized.
 
-One thing I'm especially proud of is that the final result doesn't feel like a template to me. It feels like **my own little developer workspace on the web**.
-
-The Stardance coding timer also doesn't tell the whole story of the project. The tracked time mainly represents the time I spent actually coding. There was plenty of additional time spent thinking about the design, experimenting, testing, fixing things, and figuring out why something wasn't working.
-
-**The site is basically done for this mission, but I don't really consider it finished forever.** I'll probably keep improving it, add more projects, experiment with the interface, and maybe turn it into something even more interactive in the future.
-
-If you check it out, I'd genuinely love to know what you'd rate it out of **5 stars**. ⭐
+However, before I proceed to the next stage of this project, I want to ask you, dear visitor, to rate this website on a scale from 1 to 5. ⭐
